@@ -25,6 +25,7 @@
 	--white: #fff;
     --pink: #e83e8c;
     --info: #17a2b8;
+    --celeste: #319AA6;
 }
 
 /* Formato por defecto */
@@ -43,8 +44,8 @@ body {
     background-color: var(--pink);
 }
 
-.bg-info {
-    background-color: var(--info);
+.bg-celeste {
+    background-color: var(--celeste);
 }
 
 .logo-footer {
