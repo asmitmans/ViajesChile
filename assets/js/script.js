@@ -18,7 +18,7 @@ $(document).ready(function(){
 
         if (nombre === '' || asunto === '' || mensaje === '') {
             appendAlert('Debes ingresar todos los campos para enviar el mensaje', 'danger');
-			// Función para desaparecer las alertas después de 2 segundos
+			// Función para desaparecer las alertas después de 3 segundos
             setTimeout(function() {
                 $(".alert").alert('close');
             }, 3000);
@@ -26,7 +26,7 @@ $(document).ready(function(){
         } else {
             appendAlert('Mensaje enviado exitosamente', 'success');
 
-            // Función para desaparecer las alertas después de 2 segundos
+            // Función para desaparecer las alertas después de 3 segundos
             setTimeout(function() {
                 $(".alert").alert('close');
             }, 3000);
