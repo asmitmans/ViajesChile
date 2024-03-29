@@ -26,6 +26,9 @@ $(document).ready(function(){
 
         } else {
             appendAlert('Mensaje enviado exitosamente', 'success');
+            $('#inputName').val('');
+            $('#inputAsunto').val('');
+            $('#inputMensaje').val('');
 
             // Función para desaparecer las alertas después de 3 segundos
             setTimeout(function() {
