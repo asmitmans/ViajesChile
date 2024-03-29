@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    // Cierra el menú desplegable al hacer clic en un enlace del menú
+
+
+	// Cierra el menú desplegable al hacer clic en un enlace del menú
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
@@ -30,6 +32,19 @@ $(document).ready(function(){
             setTimeout(function() {
                 $(".alert").alert('close');
             }, 3000);
+        }
+    });
+
+
+	 // Smooth scroll al hacer clic en enlaces del menú
+	 $('.navbar-nav>li>a').on('click', function(event) {
+        if (this.hash !== '') {
+            event.preventDefault();
+            var hash = this.hash;
+            var offset = 55; // Ajusta este valor según sea necesario
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - offset
+            }, 500);
         }
     });
 
