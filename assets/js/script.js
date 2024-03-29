@@ -16,8 +16,7 @@ $(document).ready(function(){
         var asunto = $('#inputAsunto').val();
         var mensaje = $('#inputMensaje').val();
 
-        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
-
+        
         if (nombre === '' || asunto === '' || mensaje === '') {
             appendAlert('Debes ingresar todos los campos para enviar el mensaje', 'danger');
 			// Función para desaparecer las alertas después de 3 segundos
@@ -50,11 +49,12 @@ $(document).ready(function(){
 
 });
 
+
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 const appendAlert = (message, type) => {
 	const wrapper = document.createElement('div')
 	wrapper.innerHTML = [
-	  `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+	  `<div class="alert alert-${type} alert-dismissible alert-custom-${type}" role="alert">`,
 	  `   <div>${message}</div>`,
 	  '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
 	  '</div>'

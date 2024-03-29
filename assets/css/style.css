@@ -77,3 +77,23 @@ footer a:hover {
         bottom: 60px; 
     }
 }
+
+.alert-custom-danger {
+    background-color: rgb(44, 11, 14);
+    border-color: rgb(132, 32, 41);
+    color: rgb(234, 134, 143);
+}
+
+.alert-custom-success {
+	background-color: rgb(5, 27, 17);
+    border-color: rgb(15, 81, 50);
+    color: rgb(117, 183, 152);
+}
+
+.alert-custom-danger .btn-close {
+    background-color: rgb(132, 32, 41);
+}
+
+.alert-custom-success .btn-close {
+    background-color: rgb(15, 81, 50);
+}
