@@ -15,6 +15,8 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer">
 	<!-- CSS Personalizado -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- indicar que no hay favicon -->
+	<link rel="icon" type="image/x-icon" href="data:;base64,iVBORw0KGgo=">
 
 	<title>Viajes Chile</title>
 </head>
@@ -211,15 +213,18 @@
 				<div class="text-center">
 					<h2 class="text-white pb-3">CONTACTO</h2>
 					<hr class="px-5 text-white">
+					<!-- Alerta  -->
+					<div id="liveAlertPlaceholder"></div>
+					
 				</div>
-				<form class="px-1 px-sm-5 pt-3">
+				<form id="formulario" class="px-1 px-sm-5 pt-3">
 					<div class="mb-3">
 						<label for="inputName" class="form-label text-white">Nombre</label>
 						<input type="text" class="form-control" id="inputName" placeholder="Nombre">
 					</div>
 					<div class="mb-3">
 						<label for="inputAsunto" class="form-label text-white">Asunto</label>
-						<input type="text" class="form-control" id="inputMensaje" placeholder="Asunto">
+						<input type="text" class="form-control" id="inputAsunto" placeholder="Asunto">
 					</div>
 					<div class="mb-3 pb-1">
 						<label for="inputMensaje" class="form-label text-white">Mensaje</label>
@@ -258,6 +263,8 @@
 			</div>
 		</div>
 	</footer>
+
+	
 
 	<!-- Botón para volver al inicio -->
 	<button id="botonVolverInicio" onclick="volverAlInicio()">↑</button>

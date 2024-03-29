@@ -3,7 +3,51 @@ $(document).ready(function(){
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
+
+	$('#formulario').submit(function(event) {
+        // Detener el envío del formulario
+        event.preventDefault();
+
+        // Validar los campos del formulario
+        var nombre = $('#inputName').val();
+        var asunto = $('#inputAsunto').val();
+        var mensaje = $('#inputMensaje').val();
+
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+
+        if (nombre === '' || asunto === '' || mensaje === '') {
+            appendAlert('Debes ingresar todos los campos para enviar el mensaje', 'danger');
+			// Función para desaparecer las alertas después de 2 segundos
+            setTimeout(function() {
+                $(".alert").alert('close');
+            }, 3000);
+
+        } else {
+            appendAlert('Mensaje enviado exitosamente', 'success');
+
+            // Función para desaparecer las alertas después de 2 segundos
+            setTimeout(function() {
+                $(".alert").alert('close');
+            }, 3000);
+        }
+    });
+
 });
+
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+const appendAlert = (message, type) => {
+	const wrapper = document.createElement('div')
+	wrapper.innerHTML = [
+	  `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+	  `   <div>${message}</div>`,
+	  '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+	  '</div>'
+	].join('')
+  
+	alertPlaceholder.append(wrapper)
+}
+
 
 // Función para mostrar u ocultar el botón dependiendo de la posición de desplazamiento
 window.onscroll = function() { mostrarBoton() };
