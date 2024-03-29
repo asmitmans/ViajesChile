@@ -97,3 +97,9 @@ footer a:hover {
 .alert-custom-success .btn-close {
     background-color: rgb(15, 81, 50);
 }
+@media (max-width: 767px) {
+    .alert-custom-danger,
+    .alert-custom-success {
+        font-size: 14px; 
+    }
+}
